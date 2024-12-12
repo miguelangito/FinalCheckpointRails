@@ -1,12 +1,15 @@
-<div id="<%= dom_id image_form %>">
-  <p>
-    <strong>Name:</strong>
-    <%= image_form.name %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= image_form.description %>
-  </p>
-
+<div id="<%= dom_id image_form %>" class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+  <div class="md:flex">
+    <div class="md:shrink-0">
+      <%= image_tag image_form.image, class: "h-48 w-full object-cover md:h-full md:w-48" %>
+    </div>
+    <div class="p-8">
+      <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
+        <%= image_form.name %>
+      </div>
+      <p class="mt-2 text-gray-500">
+        <%= image_form.description %>
+      </p>
+    </div>
+  </div>
 </div>

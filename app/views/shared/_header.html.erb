@@ -1,0 +1,13 @@
+<header class="bg-white shadow-md">
+  <div class="container mx-auto px-4 py-6 flex justify-between">
+    <%= link_to image_tag("images.png", alt: "Logo", class: "h-12 rounded"), root_path %> 
+    <div>
+      <%= form_with url: request.path, method: :get, local: true do |f| %>
+        <%= f.select :locale,
+          [["English", "en"], ["Español  ", "es"]],
+          { selected: I18n.locale },
+          { onchange: "this.form.submit()", class: "bg-gray-100 border rounded p-2" } %>
+      <% end %>
+    </div>
+  </div>
+</header>

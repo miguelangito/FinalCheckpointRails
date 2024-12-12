@@ -1,11 +1,11 @@
-<% content_for :title, "New image form" %>
+<% content_for :title, t('.title') %> 
 
-<h1>New image form</h1>
+<div class="container mx-auto px-4 py-8">
+  <h1 class="text-3xl font-bold mb-6"><%= t('title.title_form') %></h1>
 
-<%= render "form", image_form: @image_form %>
+  <%= render "form", image_form: @image_form %>
 
-<br>
-
-<div>
-  <%= link_to "Back to image forms", image_forms_path %>
+  <div class="mt-6">
+    <%= link_to t('image_forms.show.back_link'), image_forms_path, class: "bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded" %>
+  </div>
 </div>

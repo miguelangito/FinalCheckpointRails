@@ -1,0 +1,39 @@
+es:
+  title:
+    title_form: "Formulario"
+  errors:
+    messages:
+      error: "error"
+      prohibited_this_image_form_from_being_saved: "impidió que este formulario se guardara"
+  helpers:
+    submit:
+      image_form:
+        submit: "Enviar formulario"
+  activerecord:
+    attributes:
+      image_form:
+        name: "Nombre"
+        description: "Descripción"
+        image: "Imagen"
+    errors:
+      models:
+        image_form:
+          attributes:
+            name:
+              too_short: "es demasiado corto (mínimo es 3 caracteres)"
+              too_long: "es demasiado largo (máximo es 30 caracteres)"
+            description:
+              too_short: "es demasiado corta (mínimo es 3 caracteres)"
+              too_long: "es demasiado larga (máximo es 50 caracteres)"
+            image:
+              too_big: "debe ser menor que 3 MB"
+  image_forms:
+    show:
+      show_link: "Ver este formulario"
+      edit_link: "Editar este formulario"
+      back_link: "Volver a los formularios"
+      destroy_link: "Eliminar este formulario"
+    index:
+      title: "Formularios de imagen"
+      show_link: "Ver este formulario de imagen"
+      new_link: "Nuevo formulario de imagen"

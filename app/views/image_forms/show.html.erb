@@ -1,10 +1,15 @@
-<p style="color: green"><%= notice %></p>
+<div class="container mx-auto px-4 py-8">
+  <% if notice.present? %>
+    <p class="text-green-500 mb-4"><%= notice %></p> 
+  <% end %>
 
-<%= render @image_form %>
+  <%= render @image_form %>
 
-<div>
-  <%= link_to "Edit this image form", edit_image_form_path(@image_form) %> |
-  <%= link_to "Back to image forms", image_forms_path %>
+  <div class="mt-6 flex justify-between">
+    <%= link_to t('image_forms.show.edit_link'), edit_image_form_path(@image_form), class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" %>
 
-  <%= button_to "Destroy this image form", @image_form, method: :delete %>
+    <%= link_to t('image_forms.show.back_link'), image_forms_path, class: "bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded" %>
+
+    <%= button_to t('image_forms.show.destroy_link'), @image_form, method: :delete, class: "bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" %>
+  </div>
 </div>

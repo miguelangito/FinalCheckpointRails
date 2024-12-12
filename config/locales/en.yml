@@ -28,4 +28,41 @@
 #       enabled: "ON"
 
 en:
-  hello: "Hello world"
+  title:
+    title_form: "Image form"
+  errors:
+    messages:
+      error: "error"
+      prohibited_this_image_form_from_being_saved: "prohibited this form from being saved"
+  helpers:
+    submit:
+      image_form:
+        submit: "Submit form"
+  activerecord:
+    attributes:
+      image_form:
+        name: "Name"
+        description: "Description"
+        image: "Image"
+    errors:
+      models:
+        image_form:
+          attributes:
+            name:
+              too_short: "is too short (minimum is 3 characters)"
+              too_long: "is too long (maximum is 30 characters)"
+            description:
+              too_short: "is too short (minimum is 3 characters)"
+              too_long: "is too long (maximum is 50 characters)"
+            image:
+              too_big: "must be less than 3 MB"
+  image_forms:
+    show:
+      show_link: "Show this form" 
+      edit_link: "Edit this form"
+      back_link: "Back to forms"
+      destroy_link: "Delete this form"
+    index:
+      title: "Image Forms"
+      show_link: "Show this form"
+      new_link: "New form"
