@@ -34,6 +34,6 @@ es:
       back_link: "Volver a los formularios"
       destroy_link: "Eliminar este formulario"
     index:
-      title: "Formularios de imagen"
-      show_link: "Ver este formulario de imagen"
-      new_link: "Nuevo formulario de imagen"
+      title: "Formularios"
+      show_link: "Ver este formulario"
+      new_link: "Nuevo formulario"
