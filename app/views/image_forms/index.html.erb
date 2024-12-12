@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Image forms" %>
+
+<h1>Image forms</h1>
+
+<div id="image_forms">
+  <% @image_forms.each do |image_form| %>
+    <%= render image_form %>
+    <p>
+      <%= link_to "Show this image form", image_form %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New image form", new_image_form_path %>

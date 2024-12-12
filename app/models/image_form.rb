@@ -1,0 +1,2 @@
+class ImageForm < ApplicationRecord
+end
