@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get "pages/home"
+  devise_for :users, controllers: {
+    omniauth_callbacks: "users/omniauth_callbacks",
+    sessions: "users/sessions",
+    registrations: "users/registrations"
+  }
   resources :image_forms
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

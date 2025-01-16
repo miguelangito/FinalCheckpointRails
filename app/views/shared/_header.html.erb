@@ -2,12 +2,22 @@
   <div class="container mx-auto px-4 py-6 flex justify-between">
     <%= link_to image_tag("images.png", alt: "Logo", class: "h-12 rounded"), root_path %> 
     <div>
-      <%= form_with url: request.path, method: :get, local: true do |f| %>
-        <%= f.select :locale,
-          [["English", "en"], ["Español  ", "es"]],
-          { selected: I18n.locale },
-          { onchange: "this.form.submit()", class: "bg-gray-100 border rounded p-2" } %>
-      <% end %>
+      <div>
+        <%= form_with url: request.path, method: :get, local: true do |f| %>
+          <%= f.select :locale,
+            [["English", "en"], ["Español  ", "es"]],
+            { selected: I18n.locale },
+            { onchange: "this.form.submit()", class: "bg-gray-100 border rounded p-2" } %>
+        <% end %>
+      <%if current_user%>
+      <h2><%= current_user.email%></h2>
+      <%= link_to "Edit Account", edit_user_registration_path%>
+      <%= button_to "Logout", destroy_user_session_path, data: {turbo: "false"}, method: :delete %>
+      <%else%>
+      <%= link_to "Login", new_user_session_path%>
+      <%= link_to "Create Account", new_user_registration_path%>
+      <%end%>
+      </div>
     </div>
   </div>
 </header>
