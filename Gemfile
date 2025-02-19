@@ -36,7 +36,7 @@ gem "bootsnap", require: false
 
 gem "dotenv"
 
-gem "tailwindcss-rails", "~> 3.0"
+gem "tailwindcss-rails", "~> 4.1"
 
 gem "cloudinary", "~> 2.2"
 
