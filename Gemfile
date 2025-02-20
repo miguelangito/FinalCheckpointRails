@@ -38,7 +38,7 @@ gem "dotenv"
 
 gem "tailwindcss-rails", "~> 3.0"
 
-gem "cloudinary", "~> 2.2"
+gem "cloudinary", "~> 2.3"
 
 gem "activestorage"
 group :development, :test do
